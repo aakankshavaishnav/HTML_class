@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         
+        /* ul li:first-child{
+            background-color: rgb(229, 233, 10);
+            color: rgb(4, 16, 21);
+        }
+        ul li:nth-child(even){
+            
+        }
+        ul li::before{
+            content: "✿";
+            font-size: medium;
+            padding: 10px;
+            color: pink;
+        }
+        .main{
+            width: 200px;
+            height: 200px;
+            border: 10px yellow;
+        }
+        .main::first-line{
+            font-size: 27px;
+            color: pink;
+        }
+        main::first-letter{
+            font-size: 30px;
+            color: brown;
+        }
+        .main::selection{
+            background-color: rgb(61, 61, 38);
+            color: aliceblue;
+        } */
+         /* [class]{
+            background-color: rgb(213, 240, 11);
+         }
+         [title="es"]{
+            background-color: burlywood;
+         }
+         [title~="es"]{
+            background-color: crimson;
+         } */
+          [title$="es"]{
+            background-color: yellow;
+          }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><span>first</span></li>
+        <li>second</li>
+        <li>light</li>
+        <li>tree</li>
+        <li>city</li>
+        <li>road</li>
+        <li>country</li>
+
+
+    </ul>
+    <div class="main">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi tempora officia illo eum deleniti pariatur. Tempore, sequi Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex placeat eligendi consectetur velit corporis..</p>
+    </div>
+    <a href="">link without title</a>
+    <a href="" title="link">link with title</a>
+    <a href="" title="link">without yoy fann!!</a>
+    <p class="para">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem qui incidunt distinctio quasi?</p>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sidebar</title>
+<style>
+  body {
+    background-color: rgb(253, 254, 254);
+    height: 400px;
+  }
+
+  aside {
+    width: 280px;
+    background-color: white;
+    padding: 20px;
+    border: 2px solid black;
+  }
+
+  .top {
+    background-color: black;
+    color: white;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 36px;
+    display: inline-block;
+  }
+
+  .top-text {
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  ul li {
+    padding: 10px;
+    margin-bottom: px;
+  }
+
+  .middle-active {
+    background-color: lightgreen;
+    font-weight: bold;
+  }
+
+  .middle-badge {
+    background-color: red;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 10px;
+  }
+
+  .bottom {
+    border-top: 1px solid gray;
+    padding-top: 10px;
+    margin-top: 20px;
+  }
+
+  .bottom img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+  }
+</style>
+</head>
+<body>
+
+<aside>
+
+  <div class="top">A</div>
+  <span class="top-text">ALF Pte. Ltd.</span>
+
+  <hr>
+
+  <ul>
+    <li class="middle-active">🏠 Dashboard</li>
+    <li>🔔 Notifications <span class="middle-badge">4</span></li>
+    <li>📁 Projects</li>
+    <li>📝 Tasks</li>
+    <li>📊 Analytics</li>
+  </ul>
+
+  <br>
+
+  <ul>
+    <li>⚙️ Settings</li>
+    <li>❓ Support</li>
+  </ul>
+
+  <div class="bottom">
+    <img src="https://i.pravatar.cc/40">
+    <b>John Doe</b><br>
+    <span>johndoe@gmail.com</span>
+  </div>
+
+</aside>
+
+</body>
+</html>

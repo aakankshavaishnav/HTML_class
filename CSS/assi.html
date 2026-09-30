@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background-color: white;
+        }
+
+        .logo {
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .menu {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .menu li {
+            position: relative;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: black;
+            font-size: 18px;
+        }
+
+        /* Dropdown */
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 25px;
+            left: 0;
+            background-color: white;
+            list-style: none;
+            padding: 10px;
+            width: 120px;
+        }
+
+        .dropdown li {
+            padding: 8px;
+        }
+
+        .about:hover .dropdown {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            logo
+        </div>
+
+        <ul class="menu">
+            <li>
+                <a href="#">home</a>
+            </li>
+
+            <li class="about">
+                <a href="#">about</a>
+
+                <ul class="dropdown">
+                    <li><a href="#">about job</a></li>
+                    <li><a href="#">about app</a></li>
+                    <li><a href="#">clothes</a></li>
+                </ul>
+            </li>
+        </ul>
+
+    </nav>
+
+</body>
+</html>

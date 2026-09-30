@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 100px;
+            height: 100px;
+        }
+
+        .one {
+            background-color: rgb(235, 124, 20);
+            position: relative;
+            top: 30px;
+            left: 20px;
+
+        }
+
+        .two {
+            background-color: rgb(26, 29, 193);
+            position: relative;
+            z-index: 34;
+            height: 100px;
+            width: 100px;
+            z-index: 40;
+
+        }
+
+        .three {
+            background-color: rgb(99, 40, 9);
+            height: 40px;
+            width: 40px;
+            position: relative;
+
+        }
+
+        .three-child {
+            background-color: burlywood;
+            height: 100px;
+            width: 100px;
+            position: relative;
+        }
+        .three-child{
+            height: 200px;
+            width: 400px;
+            position:fixed;
+        }
+
+        .child-two {
+            height: 100px;
+            width: 100px;
+            background-color: rgb(243, 148, 148);
+            position: relative;
+            top: 90px;
+        }
+    </style>
+</head>
+
+
+
+<body>
+    <div class="container one"></div>\
+    <div class="conatiner two">
+        <div class="child-two">
+        </div>
+    </div>
+    <div class="container three
+    div class=" three-child">
+<div class="three-child"></div>
+    </div>
+    </div>
+
+   
+</body>
+
+</html>

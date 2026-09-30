@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        nav {
+            height: 60px;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            padding: 0 30px;
+            box-shadow: 0 2px 8px lightgray;
+        }
+
+        .logo {
+            margin-right: 50px;
+        }
+
+        .logo h1 {
+            color: #333;
+        }
+
+        .ul {
+            display: flex;
+            gap: 30px;
+            list-style-type: none;
+            align-items: center;
+        }
+
+        .ul li {
+            position: relative;
+        }
+
+        .ul a {
+            text-decoration: none;
+            color: black;
+            padding: 20px 5px;
+        }
+
+        .ul a:hover {
+            color: #555;
+        }
+
+        .buttons {
+            margin-left: auto;
+            display: flex;
+            gap: 10px;
+        }
+
+        .buttons button {
+            padding: 8px 15px;
+            border: 1px solid black;
+            background-color: white;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .buttons button:hover {
+            background-color: black;
+            color: white;
+        }
+
+        .home {
+            position: relative;
+        }
+
+        .dropdown-container {
+            color: black;
+            position: absolute;
+            top: 35px;
+            left: 0;
+            width: 140px;
+            background-color: white;
+            box-shadow: black 0px 5px 15px;
+            display: none;
+        }
+
+        .dropdown-container ul {
+            list-style-type: none;
+            padding: 10px 3px;
+        }
+
+        .dropdown-container li {
+            padding: 8px;
+        }
+
+        .dropdown-container a {
+            padding: 0;
+        }
+
+        .home:hover > .dropdown-container {
+            display: block;
+        }
+        .float-cont{
+            border: 5px solid brown;
+            height: 200px;
+        
+        }
+        .float-cont img{
+            float: left;
+        }
+    
+
+        .para{
+            clear: right;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">
+            <h1>logo.</h1>
+        </div>
+
+        <ul class="ul">
+            <li><a href="">Home</a></li>
+
+            <li class="home">
+                <a href="">About</a>
+
+                <div class="dropdown-container">
+                    <ul>
+                        <li><a href="">About job</a></li>
+                        <li><a href="">About business</a></li>
+                        <li><a href="">About journey</a></li>
+                    </ul>
+                </div>
+            </li>
+
+            <li><a href="">Contact</a></li>
+        </ul>
+
+        <div class="buttons">
+            <button>Login</button>
+            <button>Register</button>
+        </div>
+    </nav>
+    <div class="float-cont">
+        <img src="https://retail.degroot-inc.com/wp-content/uploads/2025/02/AS_HardyLily_Umbria_1.jpg" alt="" width="" height="100">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero nobis natus ipsam, doloremque molestias sequi accusamus blanditiis! Voluptatem placeat obcaecati vitae nemo quisquam vero fuga deleniti officia! Illum, ea sint?</p>
+        <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni ipsam corporis delectus placeat. Aut, ut reprehenderit tempora numquam nemo atque architecto, laborum repellat quibusdam voluptates tenetur deleniti autem illo. Exercitationem ipsam ratione magni, delectus obcaecati aspernatur eveniet culpa ipsum veritatis. Ad libero nemo minus eaque magni iure assumenda illo ipsum.</p>
+    </div>
+
+
+</body>
+
+</html>

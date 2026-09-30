@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mega Menu</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: "Segoe UI", Arial, sans-serif; background: #f5f5f6; }
+  a { text-decoration: none; color: inherit; }
+  ul { list-style: none; }
+
+  .navbar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    height: 80px;
+    padding: 0 30px;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(149, 149, 149, .2);
+  }
+  .logo { font-size: 34px; font-weight: 800; color: #ff3f6c; }
+
+  .nav-links { display: flex; height: 100%; }
+  .nav-item { height: 100%; display: flex; align-items: center; }
+  .nav-item > a {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: .3px;
+    border-bottom: 4px solid transparent;
+  }
+  .nav-item:hover > a { border-bottom-color: #ee5f73; }
+
+  .mega {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(1000px, 96vw);
+    display: none;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 24px;
+    padding: 28px 32px 36px;
+    background: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, .15);
+    z-index: 100;
+  }
+  .nav-item:hover .mega,
+  .nav-item:focus-within .mega { display: grid; }
+
+  .col h4 { margin-bottom: 12px; font-size: 13px; font-weight: 700; color: #ee5f73; }
+  .col li { margin-bottom: 9px; }
+  .col li a { font-size: 14px; color: #282c3f; }
+  .col li a:hover { font-weight: 700; }
+  .col hr { border: 0; border-top: 1px solid #eaeaec; margin: 18px 0; width: 60%; }
+
+  .search {
+    flex: 1;
+    max-width: 480px;
+    margin-left: auto;
+    padding: 12px 16px;
+    font-size: 14px;
+    background: #f5f5f6;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    outline: none;
+  }
+  .search:focus { background: #fff; border-color: #d4d5d9; }
+
+  @media (max-width: 800px) {
+    .navbar { flex-wrap: wrap; height: auto; gap: 10px; padding: 10px; }
+    .mega { grid-template-columns: repeat(2, 1fr); left: 0; transform: none; width: 100%; }
+    .search { max-width: 100%; width: 100%; order: 3; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="#" class="logo">M</a>
+
+  <ul class="nav-links">
+    <li class="nav-item">
+      <a href="#">MEN</a>
+      <div class="mega">
+
+        <div class="col">
+          <h4>Topwear</h4>
+          <ul>
+            <li><a href="#">T-Shirts</a></li>
+            <li><a href="#">Casual Shirts</a></li>
+            <li><a href="#">Formal Shirts</a></li>
+            <li><a href="#">Sweatshirts</a></li>
+            <li><a href="#">Sweaters</a></li>
+            <li><a href="#">Jackets</a></li>
+            <li><a href="#">Blazers &amp; Coats</a></li>
+            <li><a href="#">Suits</a></li>
+            <li><a href="#">Rain Jackets</a></li>
+          </ul>
+          <hr>
+          <h4>Indian &amp; Festive Wear</h4>
+          <ul>
+            <li><a href="#">Kurtas &amp; Kurta Sets</a></li>
+            <li><a href="#">Sherwanis</a></li>
+            <li><a href="#">Nehru Jackets</a></li>
+            <li><a href="#">Dhotis</a></li>
+          </ul>
+        </div>
+
+        <div class="col">
+          <h4>Bottomwear</h4>
+          <ul>
+            <li><a href="#">Jeans</a></li>
+            <li><a href="#">Casual Trousers</a></li>
+            <li><a href="#">Formal Trousers</a></li>
+            <li><a href="#">Shorts</a></li>
+            <li><a href="#">Track Pants &amp; Joggers</a></li>
+          </ul>
+          <hr>
+          <h4>Innerwear &amp; Sleepwear</h4>
+          <ul>
+            <li><a href="#">Briefs &amp; Trunks</a></li>
+            <li><a href="#">Boxers</a></li>
+            <li><a href="#">Vests</a></li>
+            <li><a href="#">Sleepwear &amp; Loungewear</a></li>
+            <li><a href="#">Thermals</a></li>
+          </ul>
+          <hr>
+          <h4><a href="#">Plus Size</a></h4>
+        </div>
+
+        <div class="col">
+          <h4>Footwear</h4>
+          <ul>
+            <li><a href="#">Casual Shoes</a></li>
+            <li><a href="#">Sports Shoes</a></li>
+            <li><a href="#">Formal Shoes</a></li>
+            <li><a href="#">Sneakers</a></li>
+            <li><a href="#">Sandals &amp; Floaters</a></li>
+            <li><a href="#">Flip Flops</a></li>
+            <li><a href="#">Socks</a></li>
+          </ul>
+          <hr>
+          <h4><a href="#">Personal Care &amp; Grooming</a></h4>
+          <hr>
+          <h4><a href="#">Sunglasses &amp; Frames</a></h4>
+          <hr>
+          <h4><a href="#">Watches</a></h4>
+        </div>
+
+        <div class="col">
+          <h4>Sports &amp; Active Wear</h4>
+          <ul>
+            <li><a href="#">Sports Shoes</a></li>
+            <li><a href="#">Sports Sandals</a></li>
+            <li><a href="#">Active T-Shirts</a></li>
+            <li><a href="#">Track Pants &amp; Shorts</a></li>
+            <li><a href="#">Tracksuits</a></li>
+            <li><a href="#">Jackets &amp; Sweatshirts</a></li>
+            <li><a href="#">Sports Accessories</a></li>
+            <li><a href="#">Swimwear</a></li>
+          </ul>
+          <hr>
+          <h4>Gadgets</h4>
+          <ul>
+            <li><a href="#">Smart Wearables</a></li>
+            <li><a href="#">Fitness Gadgets</a></li>
+            <li><a href="#">Headphones</a></li>
+            <li><a href="#">Speakers</a></li>
+          </ul>
+        </div>
+
+        <div class="col">
+          <h4>Fashion Accessories</h4>
+          <ul>
+            <li><a href="#">Wallets</a></li>
+            <li><a href="#">Belts</a></li>
+            <li><a href="#">Perfumes &amp; Body Mists</a></li>
+            <li><a href="#">Trimmers</a></li>
+            <li><a href="#">Deodorants</a></li>
+            <li><a href="#">Ties, Cufflinks &amp; Pocket Squares</a></li>
+            <li><a href="#">Accessory Gift Sets</a></li>
+            <li><a href="#">Caps &amp; Hats</a></li>
+            <li><a href="#">Mufflers, Scarves &amp; Gloves</a></li>
+            <li><a href="#">Phone Cases</a></li>
+            <li><a href="#">Rings &amp; Wristwear</a></li>
+            <li><a href="#">Helmets</a></li>
+          </ul>
+          <hr>
+          <h4><a href="#">Bags &amp; Backpacks</a></h4>
+          <h4 style="margin-top:14px"><a href="#">Luggages &amp; Trolleys</a></h4>
+        </div>
+
+      </div>
+    </li>
+
+    <li class="nav-item"><a href="#">WOMEN</a></li>
+    <li class="nav-item"><a href="#">KIDS</a></li>
+    <li class="nav-item"><a href="#">HOME</a></li>
+    <li class="nav-item"><a href="#">BEAUTY</a></li>
+    <li class="nav-item"><a href="#">GENZ</a></li>
+    <li class="nav-item"><a href="#">STUDIO</a></li>
+  </ul>
+
+  <input class="search" type="text" placeholder="Search for products, brands and more">
+</nav>
+
+</body>
+</html>

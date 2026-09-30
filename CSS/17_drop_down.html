@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        nav {
+            height: 60px;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            padding: 0 30px;
+            box-shadow: 0 2px 8px lightgray;
+            border: 2px red;
+        }
+
+        .logo {
+            margin-right: 50px;
+            ;
+        }
+
+        .logo h1 {
+            color: #333;
+        }
+
+        .ul {
+            display: flex;
+            gap: 30px;
+            list-style-type: none;
+            align-items: center;
+        }
+
+        .ul li {
+            position: relative;
+        }
+
+        .ul a {
+            text-decoration: none;
+            color: black;
+            padding: 20px 5px;
+        }
+
+        .ul a:hover {
+            color: #555;
+        }
+
+        .buttons {
+            margin-left: auto;
+            display: flex;
+            gap: 10px;
+        }
+
+        .buttons button {
+            padding: 8px 15px;
+            border: 1px solid rgb(59, 235, 32);
+            background-color: white;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .buttons button:hover {
+            background-color: rgb(141, 228, 146);
+            color: white;
+        }
+
+        .home {
+            position: relative;
+        }
+
+        .dropdown-container {
+            color: black;
+            position: absolute;
+            top: 35px;
+            left: 0;
+            width: 500px;
+            background-color: white;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+
+            display: none;
+        }
+
+        .dropdown-container ul {
+            list-style-type: none;
+            padding: 10px 3px;
+        }
+
+        .dropdown-container li {
+            padding: 8px;
+        }
+
+        .dropdown-container a {
+            padding: 0;
+        }
+
+        .home:hover>.dropdown-container {
+            display: block;
+        }
+        .flex{
+            display: flex;
+        }
+        .search{
+            padding: 70px;
+            color: solid black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">
+          <img src="https://images.indianexpress.com/2021/01/myntra.png" alt="" height="50px" >
+        </div>
+
+        <ul class="ul">
+            <li><a href="">Home</a></li>
+            
+
+            <li class="home">
+                <a href="">MEN</a>
+                <a href="">women</a>
+
+                <div class="dropdown-container">
+                    <ul>
+                        <!-- <li><a href="">About job</a></li>
+                        <li><a href="">About business</a></li>
+                        <li><a href="">About journey</a></li> -->
+
+                        <div class="flex">
+
+
+                            <div class="col">
+                                <h4>Topwear</h4>
+                                <ul>
+                                    <li><a href="#">T-Shirts</a></li>
+                                    <li><a href="#">Casual Shirts</a></li>
+                                    <li><a href="#">Formal Shirts</a></li>
+                                    <li><a href="#">Sweatshirts</a></li>
+                                    <li><a href="#">Sweaters</a></li>
+                                    <li><a href="#">Jackets</a></li>
+                                    <li><a href="#">Blazers &amp; Coats</a></li>
+                                    <li><a href="#">Suits</a></li>
+                                    <li><a href="#">Rain Jackets</a></li>
+                                </ul>
+                                <hr>
+                                <h4>Indian &amp; Festive Wear</h4>
+                                <ul>
+                                    <li><a href="#">Kurtas &amp; Kurta Sets</a></li>
+                                    <li><a href="#">Sherwanis</a></li>
+                                    <li><a href="#">Nehru Jackets</a></li>
+                                    <li><a href="#">Dhotis</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="col">
+                                <h4>Bottomwear</h4>
+                                <ul>
+                                    <li><a href="#">Jeans</a></li>
+                                    <li><a href="#">Casual Trousers</a></li>
+                                    <li><a href="#">Formal Trousers</a></li>
+                                    <li><a href="#">Shorts</a></li>
+                                    <li><a href="#">Track Pants &amp; Joggers</a></li>
+                                </ul>
+                                <hr>
+                                <h4>Innerwear &amp; Sleepwear</h4>
+                                <ul>
+                                    <li><a href="#">Briefs &amp; Trunks</a></li>
+                                    <li><a href="#">Boxers</a></li>
+                                    <li><a href="#">Vests</a></li>
+                                    <li><a href="#">Sleepwear &amp; Loungewear</a></li>
+                                    <li><a href="#">Thermals</a></li>
+                                </ul>
+                                <hr>
+                                <h4><a href="#">Plus Size</a></h4>
+                            </div>
+
+                            <div class="col">
+                                <h4>Footwear</h4>
+                                <ul>
+                                    <li><a href="#">Casual Shoes</a></li>
+                                    <li><a href="#">Sports Shoes</a></li>
+                                    <li><a href="#">Formal Shoes</a></li>
+                                    <li><a href="#">Sneakers</a></li>
+                                    <li><a href="#">Sandals &amp; Floaters</a></li>
+                                    <li><a href="#">Flip Flops</a></li>
+                                    <li><a href="#">Socks</a></li>
+                                </ul>
+                                <hr>
+                                <h4><a href="#">Personal Care &amp; Grooming</a></h4>
+                                <hr>
+                                <h4><a href="#">Sunglasses &amp; Frames</a></h4>
+                                <hr>
+                                <h4><a href="#">Watches</a></h4>
+                            </div>
+
+                            <div class="col">
+                                <h4>Sports &amp; Active Wear</h4>
+                                <ul>
+                                    <li><a href="#">Sports Shoes</a></li>
+                                    <li><a href="#">Sports Sandals</a></li>
+                                    <li><a href="#">Active T-Shirts</a></li>
+                                    <li><a href="#">Track Pants &amp; Shorts</a></li>
+                                    <li><a href="#">Tracksuits</a></li>
+                                    <li><a href="#">Jackets &amp; Sweatshirts</a></li>
+                                    <li><a href="#">Sports Accessories</a></li>
+                                    <li><a href="#">Swimwear</a></li>
+                                </ul>
+                                <hr>
+                                <h4>Gadgets</h4>
+                                <ul>
+                                    <li><a href="#">Smart Wearables</a></li>
+                                    <li><a href="#">Fitness Gadgets</a></li>
+                                    <li><a href="#">Headphones</a></li>
+                                    <li><a href="#">Speakers</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </ul>
+                </div>
+
+            </li>
+
+            <li><a href="">Contact</a></li>
+            <li><a href="">KIDS</a></li>
+            <li><a href="">GENZ</a></li>
+        </ul>
+<div class="search">
+    <input type="text" value="" placeholder="search ">
+</div>
+        <div class="buttons">
+            <button>Login</button>
+            <button>Register</button>
+        </div>
+    </nav>
+
+
+</body>
+
+</html>
