@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>specifity</title>
+    <style>
+        .main{
+            border: 2px solid rgb(24, 52, 214);
+            width: 200px;
+            /* transform: rotate(30deg); */
+        }
+        .maim p{
+            font-size: 20px; 
+        }
+        /* .main:hover{
+            /* transform: scaley(1,2); */
+            /* background-color: solid rgb(239, 253, 44); */
+            /* transform: rotate(42deg) skew(45deg) scale(1,1); */
+            /* transform: */
+        /* } */ 
+        .perspective-parent{
+            perspective: 100px;
+        }
+        .translated3d-example2{
+            transform: rotatex(0deg);
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            color: rgb(17, 17, 17);
+            padding: 10px;
+             transition: all 0.5s ease-in; 
+            transition-delay: 1s;
+            transition-duration: 2s; 
+            transition-property: background-color;
+            transition-timing-function: ease-in-out;
+        }
+        .translated3d-example2:hover{
+            transform:scale3d(1,1,0) rotate(45deg) ;
+            background-color: red;
+        }
+        p{
+            font-size: 22px;
+        }
+        /* div-cont ::after div cont .para p */
+    </style>
+</head>
+<body>
+    
+    <div class="perspective-parent">
+    <div class="translated3d-example2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis, consequuntur .</div>
+    </div>
+</body>
+</html>
