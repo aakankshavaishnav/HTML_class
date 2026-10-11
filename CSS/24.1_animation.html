@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+
+    <style>
+        .animate {
+            height: 100px;
+            width: 100px;
+            background-color: burlywood;
+
+            animation-name: spin;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-direction: normal;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: backwards;
+            animation-delay: 3s;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: translate(0, 0);
+            }
+
+            25% {
+                transform: translateX(200px);
+            }
+
+            50% {
+                transform: translate(200px, 200px);
+                background-color: red;
+            }
+
+            75% {
+                transform: translate(0, 200px);
+                background-color: blue;
+            }
+
+            100% {
+                transform: translate(0, 0);
+                background-color: burlywood;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="animate"></div>
+</body>
+</html>
