@@ -1,42 +1,201 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>animation</title>
+    <title>Document</title>
     <style>
-        .animate{
-            height: 100px;
-            width: 100px;
-            background-color: burlywood;
-            animation-name: spin;
-            animation-duration: 3s;
-            animation-iteration-count: infinite;
-            /* animation-delay: ; */
-              animation-direction: alternate-reverse;
-            animation-timing-function: ease-in;  
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: black;
+        }
+        .sun {
+            background-color: #FFD700;
+            box-shadow: 0 0 40px #FFA500, 0 0 80px #FF8C00;
+
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .orbit {
+            border: 2px solid grey;
+            border-radius: 50%;
+            height: 500px;
+            width: 500px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: rotate 10s linear infinite;
+        }
+
+        .planet {
+            background-color: red;
+            border-radius: 50%;
+            height: 50px;
+            width: 50px;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .orbit-mercury {
+            width: 240px;
+            height: 240px;
+            border: 2px solid grey;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+        }
+
+        .mercury {
+            height: 10px;
+            width: 10px;
+            background-color: #A5A5A5;
+            box-shadow: 0 0 15px #808080, 0 0 25px #696969;
+        }
+
+        .orbit-venus {
+            height: 330px;
+            width: 330px;
+            animation: rotate 9s linear infinite;
+        }
+
+        .venus {
+            height: 16px;
+            width: 16px;
+            background-color: #E8CDA0;
+            box-shadow: 0 0 15px #D4A76A, 0 0 25px #C68642;
 
         }
-        @keyframes spin{
-            from{
-                transform: translateX(100px);
-                /* transform: translatey(150px); */
-                
+
+        .orbit-earth {
+            height: 420px;
+            width: 420px;
+            animation: rotate 8s linear infinite;
+        }
+
+        .earth {
+            height: 18px;
+            width: 18px;
+            background-color: #2E86DE;
+            box-shadow: 0 0 15px #00BFFF, 0 0 25px #1E90FF;
+
+        }
+
+        .orbit-mars {
+            height: 510px;
+            width: 510px;
+            animation: rotate 6s linear infinite;
+        }
+
+        .mars {
+            height: 14px;
+            width: 14px;
+            background-color: #CD5C5C;
+            box-shadow: 0 0 15px #FF6347, 0 0 25px #B22222;
+
+        }
+
+        .orbit-jupiter {
+            height: 600px;
+            width: 600px;
+            animation: rotate 7s linear infinite;
+        }
+
+        .jupiter {
+            background-color: #D2B48C;
+            box-shadow: 0 0 15px #CD853F, 0 0 25px #A0522D;
+        }
+
+        .orbit-saturn {
+            height: 690px;
+            width: 690px;
+            animation: rotate 8s linear infinite;
+        }
+
+        .saturn {
+            width: 28px;
+            height: 28px;
+            background-color: #E6C27A;
+            box-shadow: 0 0 15px #D4A857, 0 0 25px #B8860B;
+        }
+
+        .orbit-uranus {
+            height: 780px;
+            width: 780px;
+            animation: rotate 9s linear infinite;
+        }
+
+        .uranus {
+            height: 23px;
+            width: 23px;
+            background-color: #7FFFD4;
+            box-shadow: 0 0 15px #40E0D0, 0 0 25px #00CED1;
+        }
+
+        .orbit-neptune {
+            height: 870px;
+            width: 870px;
+            animation: rotate 10s linear infinite;
+        }
+
+        .neptune {
+            height: 22px;
+            width: 22px;
+            background-color: #4169E1;
+            box-shadow: 0 0 15px #1E90FF, 0 0 25px #0000CD;
+        }
+
+        @keyframes rotate {
+            from {
+                transform: translate(-50%, -50%) rotate(0deg);
             }
-            to{
-                transform: translatx(200px);
-                background-color: red;
+
+            to {
+                transform: translate(-50%, -50%) rotate(360deg);
             }
         }
     </style>
 </head>
-<body>
-    <div class="animate">
 
+<body>
+    <div class="sun"></div>
+    <div class="orbit orbit-mercury">
+        <div class="planet mercury"></div>
+    </div>
+    <div class="orbit orbit-venus">
+        <div class="planet venus"></div>
+    </div>
+    <div class="orbit orbit-earth">
+        <div class="planet earth"></div>
+    </div>
+    <div class="orbit orbit-mars">
+        <div class="planet mars"></div>
+    </div>
+    <div class="orbit orbit-jupiter">
+        <div class="planet jupiter"></div>
+    </div>
+    <div class="orbit orbit-saturn">
+        <div class="planet saturn"></div>
+    </div>
+    <div class="orbit orbit-uranus">
+        <div class="planet uranus"></div>
+    </div>
+    <div class="orbit orbit-neptune">
+        <div class="planet neptune"></div>
     </div>
 </body>
-</html> -->
 
-<!-- =======================================
- 
-
+</html>

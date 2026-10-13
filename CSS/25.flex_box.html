@@ -1,28 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>flex-box </title>
     <style>
-        .main{
-            border: 2px solid green;
-            height: 90vh;
-            width: 90vw;
+        /* .main { */
+        /* border: 2px solid green; */
+        /* height: inherit; */
+        /* width: 350px;
             display: flex;
-            /* flex-direction:wrap ; */
+
+            flex-direction: row;
+             flex-wrap: nowrap;
+            justify-content: space-evenly;
+            flex-flow: row wrap;
+            align-items: center;
+             align-content: space-evenly;
+
+             gap: 20px;
+            } */
+        .main {
+            display: flex;
+            height: 1450px;
+            width: 90vw;
+            border: 2px solid green;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-items: center;
             justify-content: space-between;
-            
+            gap: 20px;
         }
-        .main div{
+
+
+        .main div {
             height: 100px;
-            width: 600px;
+            width: 200px;
             border: 2px solid yellow;
+        }
+
+        .one {
+            order: 3;
+            background-color: chartreuseS;
+        }
+
+        .two {
+            order: 2;
+            background-color: rgb(135, 197, 222);
         }
     </style>
 </head>
+
 <body>
     <div class="main">
+        <div class="cont">
+            <div class="one">1</div>
+        </div>
+        <div class="two">2</div>
+        <div class="three">3</div>
         <div>1</div>
         <div>2</div>
         <div>3</div>
@@ -30,4 +66,5 @@
         <div>5</div>
     </div>
 </body>
+
 </html>

@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #050816;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.solar-system {
+    width: 500px;
+    height: 500px;
+    position: relative;
+}
+
+
+.sun {
+    width: 70px;
+    height: 70px;
+    background: orange;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 40px orange;
+}
+
+
+.orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: revolve linear infinite;
+}
+
+
+.mercury-orbit {
+    width: 120px;
+    height: 120px;
+    animation-duration: 4s;
+}
+
+.venus-orbit {
+    width: 180px;
+    height: 180px;
+    animation-duration: 7s;
+}
+
+.earth-orbit {
+    width: 250px;
+    height: 250px;
+    animation-duration: 10s;
+}
+
+.mars-orbit {
+    width: 320px;
+    height: 320px;
+    animation-duration: 15s;
+}
+
+.jupiter-orbit {
+    width: 420px;
+    height: 420px;
+    animation-duration: 22s;
+}
+
+
+.planet {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+.mercury {
+    width: 10px;
+    height: 10px;
+    background: gray;
+}
+
+.venus {
+    width: 16px;
+    height: 16px;
+    background: #e6b566;
+}
+
+.earth {
+    width: 18px;
+    height: 18px;
+    background: #278bff;
+    box-shadow: 0 0 10px #278bff;
+}
+
+.mars {
+    width: 14px;
+    height: 14px;
+    background: #ff5733;
+}
+
+.jupiter {
+    width: 30px;
+    height: 30px;
+    background: #c9946b;
+}
+
+
+@keyframes revolve {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}

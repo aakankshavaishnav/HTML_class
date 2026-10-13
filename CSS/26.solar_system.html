@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -16,40 +16,69 @@
             border-radius: 50%;
             margin: 200px auto;
             box-shadow: 0 0 30px yellow;
+            display: flex;
+            
         }
 
-        .earth {
+        .venus {
             height: 200px;
             width: 200px;
             border: 1px solid white;
-            border-radius: 50%;
+            border-radius: 100%;
             position: absolute;
             top: 130px;
             left: 42%;
-            animation: move 4s linear infinite;
+            animation: move 4s;
         }
 
-        .mars {
-            height: 200px;
-            width: 200px;
+        .mercury{
+            height: 250px;
+            width: 250px;
             border: 1px solid white;
-            border-radius: 50%;
-
+            border-radius: 100%;
+            animation: move;
+            animation-duration: 5s;
+            top: 100px;
+            left: 212px;
+            position: absolute;
         }
 
         .planet {
             height: 20px;
             width: 20px;
-            background-color: blue;
+            background-color: rgb(100, 99, 98);
             border-radius: 50%;
         }
 
-        .marr {
+        .m-planet{
             height: 20px;
             width: 20px;
-            background-color: red;
+            background-color: rgb(241, 210, 37);
             border-radius: 50%;
+            position: absolute;
+            
         }
+        .earth{
+            height: 100px;
+            height: 250px;
+            width: 250px;
+            border: 1px solid white;
+            border-radius: 100%;
+            animation: move;
+            animation-duration: 5s;
+            top: 100px;
+            left: 212px;
+            position: absolute;
+        }
+            .e-planet{
+            height: 20px;
+            width: 20px;
+            background-color: rgb(241, 210, 37);
+            border-radius: 50%;
+            position: absolute;
+            
+        }
+        
 
         @keyframes move {
             from {
@@ -65,15 +94,19 @@
 
 <body>
 
-    <div class="sun"></div>
-    <div class="mars">
-        <div class="marr"></div>
+    <div class="sun">
+    <div class="mercury">
+        <div class="m-planet"></div>
     </div>
 
-    <div class="earth">
+    <div class="venus">
         <div class="planet"></div>
+    </div>
+    <div class="earth">
+        <div class="e-planet"></div>
+    </div>
     </div>
 
 </body>
 
-</html> -->
+</html>
