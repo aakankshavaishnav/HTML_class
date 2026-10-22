@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Cards</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 15px;
+            font-family: Georgia, serif;
+            background-color: #f8f8f8;
+            border: 2px solid green;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            max-width:900px;
+            margin: auto;
+            align-items: start;
+        }
+
+        .card {
+            background-color: white;
+            border: 1px solid #dddddd;
+            box-shadow: 0 2px 4px #cccccc;
+            padding-bottom: 10px;
+        }
+
+        .card img {
+            width: 300px;
+            height: 125px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .content {
+            padding: 12px;
+        }
+
+        .content h3 {
+            font-size: 16px;
+            margin: 0 0 12px;
+        }
+
+        .content p {
+            font-size: 14px;
+            line-height: 1.25;
+            margin: 0 0 12px;
+        }
+
+        .content button {
+            width: 100%;
+            padding: 8px;
+            background-color: #fffcfc;
+            color: rgb(14, 14, 14);
+            border: 2px solid black;
+            cursor: pointer;
+            font-size: 11px;
+        }
+
+        .content button:hover {
+            background-color: #555555;
+        }
+
+        /* Tablet */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+
+            .card img {
+                height: 140px;
+            }
+        }
+
+        /* Mobile */
+        @media (max-width: 480px) {
+            body {
+                padding: 12px;
+            }
+
+            .container {
+                grid-template-columns: 1fr;
+                gap: 18px;
+            }
+
+            .card img {
+                height: 180px;
+            }
+
+            .content h3 {
+                font-size: 18px;
+            }
+
+            .content p {
+                font-size: 15px;
+            }
+
+            .content button {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=600&q=80"
+                alt="Green mountain landscape">
+            <div class="content">
+                <h3>Seamlessly visualize quality</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, harum et laborum, dolor quaerat
+                    excepturi ut cum voluptas sit voluptatem consectetur? Non est aspernatur aperiam.</p> <button>Here's
+                    why</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="content">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkyKPH5cojs-WnQmhu6O9KxpCS9EEaojqGf2nkJHWo78y77Xu0dEDDOZY&s=10"
+                    alt="">
+                <h3>Completely Synergize</h3>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem aliquid soluta quasi magnam aperiam recusandae eos explicabo cum non laboriosam ipsum numquam quibusdam, fugiat maiores?</p>                    and idea-sharing.</p>
+                <button>Here's how</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="content">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGOAqom1AIBX_hK_r5nSnRi8E78rlFJj-jy_-cy4TyGw&s=10"
+                    alt="">
+                <h3>Dynamically Procrastinate</h3>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt itaque eveniet blanditiis reiciendis cum nulla vel! Dolor nisi praesentium sit cupiditate harum, magnam perspiciatis rerum.</p>                <button>Read more</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="content">
+                <img src="https://www.santacruz.org/wp-content/uploads/2025/01/Pleasure-Point_King-Tides-Sunset_by-Ben-Ingram_2022.12-1400x2100-2c0abf30-ef02-4091-9016-e9a20103bcd5.jpg"
+                    alt="">
+                <h3>Best in class</h3>
+<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem soluta optio quod corporis cum laudantium exercitationem consequuntur, dolore obcaecati debitis consectetur, enim deleniti neque mollitia.</p>                <button>Just do it...</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.travelandleisureasia.com/wp-content/uploads/sites/2/2024/09/19183946/thumbnail_IMG_2407.jpg"
+                alt="">
+            <div class="content">
+                <h3>Dynamically innovate supply chains</h3>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia expedita, eveniet ipsum saepe blanditiis voluptatem accusantium quis assumenda nostrum earum mollitia incidunt eaque repellat ipsam.</p>                <button>Here's why</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="content">
+                <img src="https://img.magnific.com/free-vector/abstract-sunset-mountain-landscape-japanese-style_1048-21228.jpg?semt=ais_hybrid&w=740&q=80"
+                    alt="">
+                <h3>Sanity check</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima neque sequi labore modi temporibus. Iure vitae ipsum magni? Distinctio ea eum quaerat aspernatur sequi molestias.</p>                <button>Stop here</button>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
