@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cont{
+            display: grid;
+            border: 4px solid rgb(198, 251, 7);
+            height: 90vh;
+            grid-template-areas: 
+            "header header"
+            "hero sidebar"
+            "hero sidebar" ;
+            /* grid-template-columns:200px 300px  200px ; */
+            /* grid-template-rows: 100px ; */
+        }
+        .child{
+            border: 2px solid red;
+
+        }
+        .header{
+            grid-area: header;
+            border: 2px solid black;
+        }
+        .heroimg{
+            grid-area: hero;
+            border: 2px solid black;
+        }
+        .sidebar{
+            grid-area: sidebar;
+
+        }
+    </style>
+</head>
+<body>
+  <div class="cont">
+  <div class="header">header</div>
+  <div class="heroimg">hero img</div>
+  <div class="sidebar">sidebar</div>
+  <div class="child"></div>
+  <div class="child"></div>
+  <div class="child"></div>
+  <div class="child"></div>
+  <div class="child"></div>
+  </div>  
+</body>
+</html>

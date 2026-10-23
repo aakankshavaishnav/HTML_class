@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kidz World</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: black;
+        }
+
+        .main {
+            width: 100%;
+        }
+
+        /* Navbar */
+        .nav {
+            height: 30px;
+            padding: 5px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            height: 18px;
+        }
+
+        .cart {
+            display: flex;
+            align-items: center;
+            gap: 3px;
+            font-size: 10px;
+        }
+
+        .cart img {
+            height: 20px;
+        }
+
+        /* Hero section */
+        .hero {
+            height: 282px;
+            background-image: url("https://github.com/codinggita/CGxSU_Semester_1/blob/main/Semester_1/html_css_js(sem_01)/CSS/00.assignment/02.level_2/07.kidz-world/assets/kw-background.png?raw=true");
+            background-size: cover;
+            background-position: center;
+            padding: 42px 5%;
+            color: white;
+        }
+
+        .hero h1 {
+            font-family: Georgia, serif;
+            font-size: 42px;
+            line-height: 1.35;
+        }
+
+        .hero p {
+            font-size: 14px;
+            font-weight: bold;
+            margin-top: 8px;
+        }
+
+        /* All product sections */
+        .section {
+            padding: 105px 5% 0;
+        }
+
+        .section h2 {
+            font-family: Georgia, serif;
+            font-size: 16px;
+            margin-bottom: 6px;
+        }
+
+        .main-c {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 35px;
+        }
+
+        /* Individual product card */
+        .card {
+            width: calc((100% - 175px) / 6);
+            min-width: 120px;
+        }
+
+        .img-c {
+            width: 100%;
+            height: 167px;
+            margin-bottom: 4px;
+        }
+
+        .img-c img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 6px;
+        }
+
+        .card h4 {
+            font-size: 12px;
+            margin-bottom: 6px;
+        }
+
+        .card h5 {
+            font-size: 10px;
+            font-weight: normal;
+            color: gray;
+            margin-bottom: 8px;
+        }
+
+        .price-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .price {
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .add {
+            background-color: #6395ff;
+            color: white;
+            border-radius: 3px;
+            padding: 4px 5px;
+            font-size: 11px;
+            white-space: nowrap;
+        }
+
+        .add img {
+            width: 13px;
+            height: 13px;
+            vertical-align: middle;
+        }
+
+        /* Games and handmade products */
+        .games .card,
+        .handmade .card {
+            width: calc((100% - 105px) / 4);
+            min-width: 140px;
+        }
+
+        .games .img-c {
+            height: 166px;
+            background-color: #ffca28;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .games .img-c img {
+            object-fit: contain;
+        }
+
+        .handmade .img-c {
+            height: 167px;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            padding: 8px;
+        }
+
+        /* Responsive layout */
+        @media (max-width: 700px) {
+            .section {
+                padding-top: 60px;
+            }
+
+            .main-c {
+                gap: 20px;
+            }
+
+            .card,
+            .games .card,
+            .handmade .card {
+                width: calc((100% - 20px) / 2);
+                min-width: 0;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero {
+                height: 250px;
+            }
+
+            .img-c {
+                height: 180px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="main">
+
+    <!-- Navbar -->
+    <div class="nav">
+        <img class="logo"
+        src="https://github.com/codinggita/CGxSU_Semester_1/blob/main/Semester_1/html_css_js(sem_01)/CSS/00.assignment/02.level_2/07.kidz-world/assets/kw-logo.png?raw=true"
+        alt="Kidz World">
+
+        <div class="cart">
+            <img src="https://github.com/codinggita/CGxSU_Semester_1/blob/main/Semester_1/html_css_js(sem_01)/CSS/00.assignment/02.level_2/07.kidz-world/assets/cart-icon.png?raw=true"
+            alt="Cart">
+            <h3>Cart items (0)</h3>
+        </div>
+    </div>
+
+    
+    <div class="hero">
+        <h1>Shop.<br>Have Fun.<br>Repeat.</h1>
+        <p>#NewAndNow</p>
+    </div>
+
+    <!-- Books -->
+    <section class="section">
+        <h2>Discover New Books</h2>
+
+        <div class="main-c">
+
+            <div class="card">
+                <div class="img-c">
+                    <img src="https://github.com/codinggita/CGxSU_Semester_1/blob/main/Semester_1/html_css_js(sem_01)/CSS/00.assignment/02.level_2/07.kidz-world/assets/book1.png?raw=true" alt="This Was Our Pact">
+                </div>
+                <h4>This was our pact</h4>
+                <h5>Ryan Andrews</h5>
+                <div class="price-row">
+                    <span class="price">$7.49</span>
+                    <span class="add">Add 🛒</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="img-c">
+                    <img src="https://github.com/codinggita/CGxSU_Semester_1/blob/main/Semester_1/html_css_js(sem_01)/CSS/00.assignment/02.level_2/07.kidz-world/assets/book2.png?raw=true" alt="The Famous Five">
+                </div>
+                <h4>The famous five</h4>
+                <h5>Enid Blyton</h5>
+                <div class="price-row">
+                    <span class="price">$4.59</span>
+                    <span class="add">Add 🛒</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="img-c">
+                    <img src="https://github.com/codinggita/CGxSU_Semester_1/blob/main/Semester_1/html_css_js(sem_01)/CSS/00.assignment/02.level_2/07.kidz-world/assets/book3.png?raw=true" alt="Matilda">
+                </div>
+                <h4>Matilda</h4>
+                <h5>Roald Dahl</h5>
+                <div class="price-row">
+                    <span class="price">$6.80</span>
+                    <span class="add">Add 🛒</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="img-c">
+                    <img src="https://github.com/codinggita/CGxSU_Semester_1/blob/main/Semester_1/html_css_js(sem_01)/CSS/00.assignment/02.level_2/07.kidz-world/assets/book4.png?raw=true" alt="Harry Potter">
+                </div>
+                <h4>Harry Potter</h4>
+                <h5>JK Rowling</h5>
+                <div class="price-row">
+                    <span class="price">$10</span>
+                    <span class="add">Add 🛒</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="img-c">
+                    <img src="https://github.com/codinggita/CGxSU_Semester_1/blob/main/Semester_1/html_css_js(sem_01)/CSS/00.assignment/02.level_2/07.kidz-world/assets/book5.png?raw=true" alt="For Young Readers">
+                </div>
+                <h4>For Young Readers</h4>
+                <h5>Ruskin Bond</h5>
+                <div class="price-row">
+                    <span class="price">$7.29</span>
+                    <span class="add">Add 🛒</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="img-c">
+                    <img src="https://github.com/codinggita/CGxSU_Semester_1/blob/main/Semester_1/html_css_js(sem_01)/CSS/00.assignment/02.level_2/07.kidz-world/assets/book6.png?raw=true" alt="Wimpy Kid">
+                </div>
+                <h4>Wimpy Kid - DIY</h4>
+                <h5>Jeff Kinney</h5>
+                <div class="price-row">
+                    <span class="price">$4.99</span>
+                    <span class="add">Add 🛒</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Games -->
+    <section class="section games">
+        <h2>Discover New Games</h2>
+
+        <div class="main-c">
+
+            <div class="card">
+                <div class="img-c">
+                    <img src="https://github.com/codinggita/CGxSU_Semester_1/blob/main/Semester_1/html_css_js(sem_01)/CSS/00.assignment/02.level_2/07.kidz-world/assets/dart-board.png?raw=true" alt="Dart Board">
+                </div>
+                <h4>Dart Board</h4>
+                <h5>Wooden board, 16 inches</h5>
+                <div class="price-row">
+                    <span class="price">$17.49</span>
+                    <span class="add">Add 🛒</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="img-c">
+                    <img src="https://github.com/codinggita/CGxSU_Semester_1/blob/main/Semester_1/html_css_js(sem_01)/CSS/00.assignment/02.level_2/07.kidz-world/assets/connect-four.png?raw=true" alt="Connect Four">
+                </div>
+                <h4>Connect 4</h4>
+                <h5>Board game, multiplayer</h5>
+                <div class="price-row">
+                    <span class="price">$19.99</span>
+                    <span class="add">Add 🛒</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="img-c">
+                    <img src="https://github.com/codinggita/CGxSU_Semester_1/blob/main/Semester_1/html_css_js(sem_01)/CSS/00.assignment/02.level_2/07.kidz-world/assets/jenga.png?raw=true" alt="Jenga">
+                </div>
+                <h4>Jenga</h4>
+                <h5>Wooden blocks, 54 pieces</h5>
+                <div class="price-row">
+                    <span class="price">$20.99</span>
+                    <span class="add">Add 🛒</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="img-c">
+                    <img src="https://github.com/codinggita/CGxSU_Semester_1/blob/main/Semester_1/html_css_js(sem_01)/CSS/00.assignment/02.level_2/07.kidz-world/assets/monopoly.png?raw=true" alt="Monopoly">
+                </div>
+                <h4>Monopoly</h4>
+                <h5>1.61 x 15.75 x 10.51 inches</h5>
+                <div class="price-row">
+                    <span class="price">$19.49</span>
+                    <span class="add">Add 🛒</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section handmade">
+        <h2>Handmade with love</h2>
+
+        <div class="main-c">
+
+            <div class="card">
+                <div class="img-c">
+                    <img src="https://github.com/codinggita/CGxSU_Semester_1/blob/main/Semester_1/html_css_js(sem_01)/CSS/00.assignment/02.level_2/07.kidz-world/assets/bookmarks.png?raw=true" alt="Bookmarks">
+                </div>
+                <h4>Bookmarks</h4>
+                <h5>Handmade with love</h5>
+                <div class="price-row">
+                    <span class="price">$12.49</span>
+                    <span class="add">Add 🛒</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="img-c">
+                    <img src="https://github.com/codinggita/CGxSU_Semester_1/blob/main/Semester_1/html_css_js(sem_01)/CSS/00.assignment/02.level_2/07.kidz-world/assets/birthday-card.png?raw=true" alt="Birthday Card">
+                </div>
+                <h4>Birthday card</h4>
+                <h5>Handmade with love</h5>
+                <div class="price-row">
+                    <span class="price">$19.99</span>
+                    <span class="add">Add 🛒</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="img-c">
+                    <img src="https://github.com/codinggita/CGxSU_Semester_1/blob/main/Semester_1/html_css_js(sem_01)/CSS/00.assignment/02.level_2/07.kidz-world/assets/stuffed-toy.png?raw=true" alt="Stuffed Toys">
+                </div>
+                <h4>Stuffed toys</h4>
+                <h5>Handmade with love</h5>
+                <div class="price-row">
+                    <span class="price">$15.99</span>
+                    <span class="add">Add 🛒</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="img-c">
+                    <img src="https://github.com/codinggita/CGxSU_Semester_1/blob/main/Semester_1/html_css_js(sem_01)/CSS/00.assignment/02.level_2/07.kidz-world/assets/dream-catcher.png?raw=true" alt="Dream Catcher Drawing">
+                </div>
+                <h4>Dream catcher drawing</h4>
+                <h5>Handmade with love</h5>
+                <div class="price-row">
+                    <span class="price">$18.49</span>
+                    <span class="add">Add 🛒</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,185 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.board {
+    width: 600px;
+    height: 600px;
+    position: relative;
+    border: 1px solid black;
+}
+
+/* Four big boxes */
+.box {
+    width: 40%;
+    height: 40%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.red {
+    top: 0;
+    left: 0;
+    background: red;
+}
+
+.green {
+    top: 0;
+    right: 0;
+    background: green;
+}
+
+.blue {
+    bottom: 0;
+    left: 0;
+    background: blue;
+}
+
+.yellow {
+    bottom: 0;
+    right: 0;
+    background: yellow;
+}
+
+/* Four circles */
+.home {
+    width: 60%;
+    height: 60%;
+    background: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.home span {
+    width: 35px;
+    height: 35px;
+    border: 4px solid;
+    border-radius: 50%;
+}
+
+.red .home span {
+    border-color: red;
+}
+
+.green .home span {
+    border-color: green;
+}
+
+.blue .home span {
+    border-color: blue;
+}
+
+.yellow .home span {
+    border-color: yellow;
+}
+
+/* All paths */
+.top, .bottom, .left, .right {
+    position: absolute;
+    display: grid;
+}
+
+.top, .bottom {
+    width: 20%;
+    height: 40%;
+    left: 40%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+}
+
+.top {
+    top: 0;
+}
+
+.bottom {
+    bottom: 0;
+}
+
+.left, .right {
+    width: 40%;
+    height: 20%;
+    top: 40%;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.left {
+    left: 0;
+}
+
+.right {
+    right: 0;
+}
+
+/* Small boxes */
+.top div, .bottom div,
+.left div, .right div {
+    border: 1px solid black;
+    text-align: center;
+    color: black;
+    font-size: 20px;
+}
+
+.g {
+    background: green;
+}
+
+.r {
+    background: red;
+}
+
+.y {
+    background: yellow;
+}
+
+.b {
+    background: blue;
+}
+
+/* Center triangles */
+.center {
+    position: absolute;
+    width: 20%;
+    height: 20%;
+    top: 40%;
+    left: 40%;
+}
+
+.center div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.greenpart {
+    background: green;
+    clip-path: polygon(0 0, 100% 0, 50% 50%);
+}
+
+.redpart {
+    background: red;
+    clip-path: polygon(0 0, 50% 50%, 0 100%);
+}
+
+.yellowpart {
+    background: yellow;
+    clip-path: polygon(100% 0, 100% 100%, 50% 50%);
+}
+
+.bluepart {
+    background: blue;
+    clip-path: polygon(0 100%, 100% 100%, 50% 50%);
+}

@@ -1,0 +1,46 @@
+/* mobile - default */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: gold;
+  border: 3px dashed black;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.col {
+  border: 3px solid #333;
+  background-color: #dfdfdf;
+  font-size: 20px;
+  flex-basis: 100%;
+}
+
+/* tablets */
+@media (min-width: 576px) {
+  .col {
+    flex-basis: 50%;
+  }
+}
+
+/* desktop */
+@media (min-width: 768px) {
+  .col {
+    flex-basis: 25%;
+  }
+}
+
+/* Background Styles */
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  padding: 30px;
+}

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ludo Board</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .cont {
+            width: 600px;
+            height: 600px;
+            border: 1px solid black;
+        }
+
+        .top, .bottom {
+            height: 40%;
+            width: 100%;
+            display: flex;
+        }
+
+        .red, .green, .blue, .yellow {
+            width: 40%;
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-content: space-evenly;
+            padding: 30px;
+        }
+
+        .red {
+            background-color: #ef3025;
+        }
+
+        .green {
+            background-color: #347f20;
+        }
+
+        .blue {
+            background-color: blue;
+        }
+
+        .yellow {
+            background-color: yellow;
+        }
+
+        .rtoken, .gtoken, .btoken, .ytoken {
+            width: 40%;
+            height: 40%;
+            background-color: white;
+            border: 5px solid;
+            border-radius: 50%;
+        }
+
+        .rtoken {
+            border-color: #ef3025;
+        }
+
+        .gtoken {
+            border-color: #347f20;
+        }
+
+        .btoken {
+            border-color: blue;
+        }
+
+        .ytoken {
+            border-color: yellow;
+        }
+
+        .path {
+            width: 20%;
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .cell {
+            width: 33.33%;
+            height: 16.66%;
+            border: 1px solid black;
+            background-color: white;
+        }
+
+        .greenpath .cell:nth-child(5),
+        .greenpath .cell:nth-child(8),
+        .greenpath .cell:nth-child(11),
+        .greenpath .cell:nth-child(14),
+        .greenpath .cell:nth-child(17) {
+            background-color: #347f20;
+        }
+
+        .bluepath .cell:nth-child(2),
+        .bluepath .cell:nth-child(5),
+        .bluepath .cell:nth-child(8),
+        .bluepath .cell:nth-child(11),
+        .bluepath .cell:nth-child(14) {
+            background-color: blue;
+        }
+
+        .middle {
+            height: 20%;
+            width: 100%;
+            display: flex;
+        }
+
+        .redpath, .yellowpath {
+            width: 40%;
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .redpath .cell, .yellowpath .cell {
+            width: 16.66%;
+            height: 33.33%;
+        }
+
+        .centre {
+            width: 20%;
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .triangle {
+            width: 50%;
+            height: 50%;
+        }
+
+        .green1 {
+            background-color: #347f20;
+        }
+
+        .yellow1 {
+            background-color: yellow;
+        }
+
+        .red1 {
+            background-color: #ef3025;
+        }
+
+        .blue1 {
+            background-color: blue;
+        }
+
+        .bottom .path {
+            order: 2;
+        }
+
+        .bottom .yellow {
+            order: 3;
+        }
+
+        @media (max-width: 620px) {
+            .cont {
+                width: 95vw;
+                height: 95vw;
+            }
+
+            .red, .green, .blue, .yellow {
+                padding: 5%;
+            }
+
+            .rtoken, .gtoken, .btoken, .ytoken {
+                border-width: 3px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cont">
+
+        <div class="top">
+
+            <div class="red">
+                <div class="rtoken"></div>
+                <div class="rtoken"></div>
+                <div class="rtoken"></div>
+                <div class="rtoken"></div>
+            </div>
+
+            <div class="path greenpath">
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div>
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div>
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div>
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div>
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div>
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div>
+            </div>
+
+            <div class="green">
+                <div class="gtoken"></div>
+                <div class="gtoken"></div>
+                <div class="gtoken"></div>
+                <div class="gtoken"></div>
+            </div>
+
+        </div>
+
+        <div class="middle">
+
+            <div class="redpath">
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div>
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div>
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div>
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div>
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div>
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div>
+            </div>
+
+            <div class="centre">
+                <div class="triangle green1"></div>
+                <div class="triangle yellow1"></div>
+                <div class="triangle red1"></div>
+                <div class="triangle blue1"></div>
+            </div>
+
+            <div class="yellowpath">
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div>
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div>
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div>
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div>
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div>
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div>
+            </div>
+
+        </div>
+
+        <div class="bottom">
+
+            <div class="blue">
+                <div class="btoken"></div>
+                <div class="btoken"></div>
+                <div class="btoken"></div>
+                <div class="btoken"></div>
+            </div>
+
+            <div class="path bluepath">
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div>
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div>
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div>
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div>
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div>
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div>
+            </div>
+
+            <div class="yellow">
+                <div class="ytoken"></div>
+                <div class="ytoken"></div>
+                <div class="ytoken"></div>
+                <div class="ytoken"></div>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+</html>
