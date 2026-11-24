@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>YouTube Clone</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial;
+        }
+
+        body {
+            background-color: #0f0f0f;
+            color: white;
+        }
+
+        .navbar {
+            height: 50px;
+            background-color: #202020;
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+            gap: 25px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+        .navbar img {
+            width: 25px;
+            height: 25px;
+            object-fit: contain;
+        }
+
+        .logo {
+            width: 100px !important;
+        }
+
+        .search {
+            display: flex;
+            margin-left: 200px;
+        }
+
+        .search input {
+            width: 500px;
+            padding: 10px;
+            background-color: #121212;
+            border: 1px solid #444;
+            color: white;
+        }
+
+        .search img {
+            background-color: #333;
+            padding: 5px;
+            width: 45px;
+        }
+
+        .sidebar {
+            width: 225px;
+            background-color: #202020;
+            position: fixed;
+            top: 50px;
+            bottom: 0;
+            padding-top: 15px;
+        }
+
+        .menu {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            padding: 10px 20px;
+            height: 40px;
+        }
+
+        .menu img {
+            width: 22px;
+            height: 22px;
+            object-fit: contain;
+        }
+
+        .menu:hover {
+            background-color: #383838;
+        }
+
+        hr {
+            border: 1px solid #333;
+            margin: 15px 0;
+        }
+
+        .heading {
+            color: #aaa;
+            padding: 10px 20px;
+            font-weight: bold;
+        }
+
+        .main {
+            margin-left: 225px;
+            padding-top: 60px;
+        }
+
+        .topics {
+            display: flex;
+            gap: 10px;
+            padding: 10px 25px;
+            overflow: hidden;
+            white-space: nowrap;
+            border-bottom: 1px solid #333;
+        }
+
+        .topics span {
+            background-color: #333;
+            padding: 9px 15px;
+            border-radius: 20px;
+        }
+
+        .topics .selected {
+            background-color: white;
+            color: black;
+        }
+
+        .videos {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 35px 15px;
+            padding: 20px 25px;
+        }
+
+        .thumbnail {
+            width: 100%;
+            height: 155px;
+            object-fit: cover;
+        }
+
+        .video-info {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .avatar {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .title {
+            font-size: 15px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .details {
+            color: #aaa;
+            font-size: 13px;
+            line-height: 20px;
+        }
+
+        @media (max-width: 1000px) {
+            .videos {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .search {
+                margin-left: 20px;
+            }
+
+            .search input {
+                width: 250px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <img src="Youtube logo.png">
+        <img class="logo" src="assets/Youtube logo.png">
+
+        <div class="search">
+            <input type="text" placeholder="Search">
+            <img src="search.png">
+        </div>
+
+        <img src="mic.png">
+        <img src="create.png">
+        <img src="live.png">
+        <img src="bell.png">
+        <img src="Ellipse 1 (1).png">
+    </div>
+
+    <div class="sidebar">
+        <div class="menu"><img src="home.png">Home</div>
+        <div class="menu"><img src="explore.png">Explores</div>
+        <div class="menu"><img src="shorts.png">Shorts</div>
+        <div class="menu"><img src="subscription.png">Subscriptions</div>
+        <hr>
+        <div class="menu"><img src="library.png">Library</div>
+        <div class="menu"><img src="history.png">History</div>
+        <div class="menu"><img src="your_video.png">Your videos</div>
+        <div class="menu"><img src="watch_later.png">Watch later</div>
+        <div class="menu"><img src="liked.png">Liked videos</div>
+        <div class="menu"><img src="more.png">Show more</div>
+        <hr>
+        <div class="heading">SUBSCRIPTIONS</div>
+        <div class="menu"><img src="Ellipse 1 (1).png">Nadir On The Go</div>
+        <div class="menu"><img src="Ellipse 1 (2).png">Coke Studio Bangla</div>
+        <div class="menu"><img src="Ellipse 1 (3).png">MKBHD</div>
+        <div class="menu"><img src="Ellipse 1 (5).png">Figma</div>
+        <div class="menu"><img src="Ellipse 1 (4).png">ATC Android</div>
+        <div class="menu"><img src="Ellipse 1 (6).png">Alux.com</div>
+    </div>
+
+    <div class="main">
+        <div class="topics">
+            <span class="selected">All</span>
+            <span>Cook Studio</span>
+            <span>UX</span>
+            <span>Case Study</span>
+            <span>Music</span>
+            <span>Bangla Lofi</span>
+            <span>Tour</span>
+            <span>Saintmartin</span>
+            <span>Tech</span>
+            <span>iPhone 13</span>
+            <span>User Interface Design</span>
+            <span>Computer</span>
+        </div>
+
+        <div class="videos">
+            <div>
+                <img class="thumbnail" src="Thumbnail-8.png">
+                <div class="video-info"><img class="avatar" src="Ellipse 1 (1).png">
+                    <div>
+                        <div class="title">Bulbuli | Coke Studio Bangla | Season One</div>
+                        <div class="details">Coke Studio Bangla ✔<br>1.5M views · 2 days ago</div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img class="thumbnail" src="Thumbnail-9.png">
+                <div class="video-info"><img class="avatar" src="Ellipse 1 (4).png">
+                    <div>
+                        <div class="title">Infinix Note 12: AMOLED Helio G88 SoC!</div>
+                        <div class="details">ATC Android ToTo Company ✔<br>4.2M views · 2 days ago</div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img class="thumbnail" src="Thumbnail-10.png">
+                <div class="video-info"><img class="avatar" src="Thumbnail-3.png">
+                    <div>
+                        <div class="title">My first UX Design case study</div>
+                        <div class="details">Saptarshi Prakash<br>4.8K views · 1 year ago</div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img class="thumbnail" src="Thumbnail-11.png">
+                <div class="video-info">
+                    <div>
+                        <div class="title">My Mix</div>
+                        <div class="details">Lopamudra Mitra, Anupam Roy, and more</div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img class="thumbnail" src="Thumbnail-4.png">
+                <div class="video-info"><img class="avatar" src="Ellipse 1 (3).png">
+                    <div>
+                        <div class="title">UX Design - What is it?</div>
+                        <div class="details">AJ&Smart ✔<br>150K views · 3 years ago</div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img class="thumbnail" src="Thumbnail-5.png">
+                <div class="video-info">
+                    <div>
+                        <div class="title">Mix - Mombati | Mohon Sharif</div>
+                        <div class="details">Mohon Sharif, Odd Signature, and more</div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img class="thumbnail" src="Thumbnail-9.png">
+                <div class="video-info"><img class="avatar" src="Ellipse 1 (2).png">
+                    <div>
+                        <div class="title">48 VISA-FREE Countries</div>
+                        <div class="details">Nadir On The Go<br>1.7M views · 1 year ago</div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img class="thumbnail" src="Thumbnail-7.png">
+                <div class="video-info"><img class="avatar" src="Ellipse 1 (5).png">
+                    <div>
+                        <div class="title">14 Advanced Tips to Design FASTER in Figma</div>
+                        <div class="details">Mizko ✔<br>53K views · 1 year ago</div>
+                    </div>
+                </div>
+            </div>
+            <div><img class="thumbnail" src="Thumbnail-10.png">
+                <div class="video-info">
+                    <div>
+                        <div class="title">Travel Video</div>
+                        <div class="details">Travel Channel</div>
+                    </div>
+                </div>
+            </div>
+            <div><img class="thumbnail" src="Thumbnail-5.png">
+                <div class="video-info">
+                    <div>
+                        <div class="title">Tech Skills</div>
+                        <div class="details">Design and Tech</div>
+                    </div>
+                </div>
+            </div>
+            <div><img class="thumbnail" src="Thumbnail-2.png">
+                
+                <div class="video-info">
+                    <div>
+                        <div class="title">Google</div>
+                        <div class="details">Technology</div>
+                    </div>
+                </div>
+            </div>
+            <div><img class="thumbnail" src="Thumbnail-3.png">
+                <div class="video-info"><img class="avatar" src="Ellipse 1 (2).png">
+                    <div>
+                <div class="video-info">
+                    <div>
+                        <div class="title">Microsoft</div>
+                        <div class="details">Microsoft</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
