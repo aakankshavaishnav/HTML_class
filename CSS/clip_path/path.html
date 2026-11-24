@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4 Triangles Square</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .cont {
+            position: relative;
+            height: 200px;
+            width: 200px;
+            /* border: 2px solid black; */
+        }
+
+        .cont div {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+        }
+
+        .red {
+            background-color: rgb(219, 255, 38);
+            clip-path: polygon(0 0, 100% 0, 50% 50%);
+        }
+
+        .blue {
+            background-color: rgb(241, 9, 9);
+            clip-path: polygon(100% 0, 100% 100%, 50% 50%);
+        }
+
+        .green {
+            background-color: rgb(53, 0, 245);
+            clip-path: polygon(100% 100%, 0 100%, 50% 50%);
+        }
+
+        .yellow {
+            background-color: rgb(10, 241, 17);
+            clip-path: polygon(0 100%, 0 0, 50% 50%);
+        }
+
+        .shape {
+            float: left;
+            clip-path: circle(40%);
+            shape-outside: margin-box;
+        }
+
+        /* Circle clip with text wrapping */
+        img {
+            float: left;
+            clip-path: circle(40%);
+            shape-outside: circle(45%);
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="cont">
+        <div class="red"></div>
+        <div class="blue"></div>
+        <div class="green"></div>
+        <div class="yellow"></div>
+    </div>
+
+    <div class="shape">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKWuN24n3B5RuaLe_OHh8UE9dhtmUxoBOWa2uwNNv2wNJe84rdzk9I8_zP&s=10"
+            alt="" height="100px" width="100px">
+    </div>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcyyprQZbCjgSq8unrce0N5Bb8rA73ddsV7FHWZm3iaFh5xc03ervkOyOb&s=10"
+        height="200px" width="200px" alt="">
+
+</body>
+
+</html>

@@ -7,14 +7,16 @@
     <style>
         .cont{
             display: grid;
-            border: 4px solid rgb(198, 251, 7);
+            border: 4px solid rgb(232, 14, 14);
+
+            background-color: rgb(227, 212, 215);
             height: 90vh;
             grid-template-areas: 
-            "header header"
+            "header header" 
             "hero sidebar"
             "hero sidebar" ;
-            /* grid-template-columns:200px 300px  200px ; */
-            /* grid-template-rows: 100px ; */
+            
+           
         }
         .child{
             border: 2px solid red;
@@ -22,11 +24,15 @@
         }
         .header{
             grid-area: header;
-            border: 2px solid black;
+            border: 2px solid rgb(235, 10, 10);
+            grid-column-start: 2;
+            grid-column-end:3;
+            grid-row-start: 2;
+            grid-row-end: 4;
         }
         .heroimg{
             grid-area: hero;
-            border: 2px solid black;
+            border: 2px solid rgb(245, 13, 13);
         }
         .sidebar{
             grid-area: sidebar;
@@ -39,11 +45,11 @@
   <div class="header">header</div>
   <div class="heroimg">hero img</div>
   <div class="sidebar">sidebar</div>
+  <!-- <div class="child"></div>
   <div class="child"></div>
   <div class="child"></div>
   <div class="child"></div>
-  <div class="child"></div>
-  <div class="child"></div>
+  <div class="child"></div> -->
   </div>  
 </body>
 </html>

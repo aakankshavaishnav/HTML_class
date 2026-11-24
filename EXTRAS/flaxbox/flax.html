@@ -1,0 +1,61 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 400px;
+            width: 1000px;
+            display: inline-block;
+            /* border: 2px solid black; */
+        }
+        .cont{
+            width: 800px;
+            height: 200px;
+            display: flex;
+            flex-direction: row ;
+            border: 2px solid black; 
+            flex-wrap: wrap;
+            justify-content:center ;
+
+            align-items: center;
+            align-content: center;
+        }
+        div{
+            height: 100px;
+            width: 150px;
+            display: inline-block;
+            border: 2px solid blue;
+        }
+        .box1{
+            background-color: red;
+        }
+        .box2{
+            background-color: rgb(36, 230, 6);
+            height: 200px;
+        }
+        .box3{
+            background-color: rgb(235, 216, 12);
+        }
+        .box4{
+            background-color: rgb(250, 12, 218);
+        }
+        .box5{
+            background-color: rgb(35, 244, 8);
+        }
+    </style>
+</head>
+<body>
+  <h1>flex playground</h1>
+  <div class="cont">
+    <div class="box1">box1</div>
+    <div class="box2">box2</div>
+    <div class="box3">box3</div>
+    <div class="box4">box4</div>
+    <div class="box5">box5</div>
+
+  </div>
+</body>
+</html>
